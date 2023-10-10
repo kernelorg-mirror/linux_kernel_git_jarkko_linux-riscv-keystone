@@ -3,6 +3,8 @@
 # Makefile for the RISC-V Linux kernel
 #
 
+obj-$(CONFIG_RISCV_KEYSTONE)	+= keystone.o
+
 ifdef CONFIG_FTRACE
 CFLAGS_REMOVE_ftrace.o	= $(CC_FLAGS_FTRACE)
 CFLAGS_REMOVE_patch.o	= $(CC_FLAGS_FTRACE)

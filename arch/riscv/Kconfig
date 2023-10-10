@@ -4,6 +4,17 @@
 # see Documentation/kbuild/kconfig-language.rst.
 #
 
+config RISCV_KEYSTONE
+	bool "Keystone"
+	default n
+	depends on CMA
+	help
+	  Keystone is a trusted execution environment hosted by Keystone security
+	  monitor, which runs inside SBI. Keystone driver provides ioctl interface
+	  for creating and running Keystone enclaves.
+
+	  If you don't know what to do here, say N.
+
 config 64BIT
 	bool
 
